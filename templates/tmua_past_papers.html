@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TMUA Past Papers</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='duplicate.css') }}">
+    <script src="{{ url_for('static', filename='questionnaire.js') }}" defer></script>
+</head>
+<body>
+    <h1>TMUA Past Papers</h1>
+    <p>Select a paper to practice TMUA past questions. Each year contains two papers with interactive questions.</p>
+
+    <div class="topic-container">
+        {% for year in range(2022, 2016, -1) %}
+            <div class="year-group">
+                <h2>TMUA {{ year }}</h2>
+                <div class="paper-links">
+                    <div class="topic-box">
+                        <a href="{{ url_for('tmua_paper', paper_number=1, year=year) }}">
+                            <img src="/static/images/tmua_past_papers.png" alt="TMUA Icon">
+                            <span>Paper 1</span>
+                        </a>
+                    </div>
+                    <div class="topic-box">
+                        <a href="{{ url_for('tmua_paper', paper_number=2, year=year) }}">
+                            <img src="/static/images/tmua_past_papers.png" alt="TMUA Icon">
+                            <span>Paper 2</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

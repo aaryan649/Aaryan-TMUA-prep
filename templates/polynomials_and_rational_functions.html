@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polynomials and Rational Functions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+</head>
+<body class="light-mode">
+    <button id="dark-mode-toggle" class="dark-mode">Dark Mode</button>
+    <h1>Polynomials and Rational Functions</h1>
+    <p>Understanding polynomials and rational functions is crucial for solving TMUA questions. This section covers:</p>
+    <ul>
+        <li>Basic definitions and operations</li>
+        <li>Factoring polynomials</li>
+        <li>Graphing polynomials</li>
+        <li>Solving polynomial equations</li>
+        <li>Rational functions and asymptotes</li>
+    </ul>
+
+    <h2>Basic Definitions and Operations</h2>
+    <p>Polynomials are expressions consisting of variables and coefficients, involving only the operations of addition, subtraction, multiplication, and non-negative integer exponents of variables.</p>
+    <ul>
+        <li>
+            <strong>Definition:</strong> A polynomial is an expression like \( ax^n + bx^{n-1} + ... + k \), where \(a, b, ..., k\) are constants and \(n\) is a non-negative integer.
+            <br><br>
+            <strong>Example:</strong> \( P(x) = 4x^3 - 3x^2 + 2x - 1 \) is a polynomial of degree 3.
+            <br>
+            Explanation: The highest power of x is 3, so the degree is 3. The coefficients are 4, -3, 2, and -1.
+        </li>
+        <li>
+            <strong>Addition and Subtraction:</strong> Combine like terms by adding or subtracting their coefficients.
+            <br><br>
+            <strong>Example:</strong> Simplify \( (3x^2 + 2x - 1) + (2x^2 - x + 4) \)
+            <br>
+            Step 1: Identify like terms: \(3x^2\) and \(2x^2\), \(2x\) and \(-x\), -1 and 4
+            <br>
+            Step 2: Add the coefficients of like terms: \((3+2)x^2 + (2-1)x + (-1+4)\)
+            <br>
+            Step 3: Simplify: \(5x^2 + x + 3\)
+        </li>
+    </ul>
+    
+    <h2>Factoring Polynomials</h2>
+    <p>Factoring involves expressing a polynomial as a product of its factors.</p>
+    <ul>
+        <li>
+            <strong>Common Factor:</strong> Identify and factor out the greatest common factor (GCF) of all terms.
+            <br><br>
+            <strong>Example:</strong> Factor \( 6x^2 - 12x \)
+            <br>
+            Step 1: Identify the GCF: 6x is common to both terms
+            <br>
+            Step 2: Factor out the GCF: \( 6x(x - 2) \)
+        </li>
+        <li>
+            <strong>Difference of Squares:</strong> For expressions in the form \(a^2 - b^2\), factor as \((a+b)(a-b)\).
+            <br><br>
+            <strong>Example:</strong> Factor \( x^2 - 4 \)
+            <br>
+            Step 1: Recognize this as a difference of squares: \(x^2 - 2^2\)
+            <br>
+            Step 2: Apply the formula: \((x+2)(x-2)\)
+        </li>
+    </ul>
+    
+    <h2>Graphing Polynomials</h2>
+    <p>Graphing involves plotting the polynomial on a coordinate system to visualize its behavior.</p>
+    <ul>
+        <li>
+            <strong>Intercepts:</strong> Find where the polynomial crosses the x and y axes.
+            <br><br>
+            <strong>Example:</strong> Find the intercepts of \( y = x^2 - 4x + 3 \)
+            <br>
+            For x-intercepts: Set y = 0 and solve \( x^2 - 4x + 3 = 0 \)
+            <br>
+            Factor: \( (x-1)(x-3) = 0 \), so x = 1 or x = 3
+            <br>
+            For y-intercept: Set x = 0, y = 3
+            <br>
+            Intercepts are (1,0), (3,0), and (0,3)
+        </li>
+        <li>
+            <strong>End Behavior:</strong> Analyze how the function behaves as x approaches positive or negative infinity.
+            <br><br>
+            <strong>Example:</strong> Determine the end behavior of \( y = x^3 - 2x^2 + x - 1 \)
+            <br>
+            Step 1: Identify the leading term: \(x^3\)
+            <br>
+            Step 2: As x → ∞, \(y → ∞\) (cubic function with positive leading coefficient)
+            <br>
+            Step 3: As x → -∞, \(y → -∞\)
+        </li>
+    </ul>
+    
+    <h2>Solving Polynomial Equations</h2>
+    <p>Solving involves finding the roots of the polynomial equation.</p>
+    <ul>
+        <li>
+            <strong>Factoring Method:</strong> Factor the polynomial and set each factor to zero.
+            <br><br>
+            <strong>Example:</strong> Solve \( x^3 - x^2 - 6x = 0 \)
+            <br>
+            Step 1: Factor out the GCF: \( x(x^2 - x - 6) = 0 \)
+            <br>
+            Step 2: Factor further: \( x(x+2)(x-3) = 0 \)
+            <br>
+            Step 3: Set each factor to zero: x = 0, x = -2, or x = 3
+        </li>
+    </ul>
+    
+    <h2>Rational Functions and Asymptotes</h2>
+    <p>Rational functions are ratios of polynomials. Asymptotes are lines that the graph of the function approaches but never touches.</p>
+    <ul>
+        <li>
+            <strong>Vertical Asymptotes:</strong> Occur where the denominator equals zero.
+            <br><br>
+            <strong>Example:</strong> Find the vertical asymptote of \( f(x) = \frac{x^2 - 1}{x - 2} \)
+            <br>
+            Step 1: Set the denominator to zero: x - 2 = 0
+            <br>
+            Step 2: Solve for x: x = 2
+            <br>
+            The vertical asymptote is at x = 2
+        </li>
+        <li>
+            <strong>Horizontal Asymptotes:</strong> Determined by comparing the degrees of the numerator and denominator.
+            <br><br>
+            <strong>Example:</strong> Find the horizontal asymptote of \( f(x) = \frac{2x^2 + 3x - 1}{x^2 - 4} \)
+            <br>
+            Step 1: Compare degrees: both numerator and denominator are degree 2
+            <br>
+            Step 2: Divide the leading coefficients: 2 ÷ 1 = 2
+            <br>
+            The horizontal asymptote is y = 2
+        </li>
+    </ul>
+    
+    
+    <h2>Interactive TMUA Style Question</h2>
+    <p>Now, apply what you've learned to this TMUA-style question:</p>
+    <h3>Question:</h3>
+    <p>Find the roots of the polynomial \( x^3 - 6x^2 + 11x - 6 = 0 \).</p>
+    <div class="options">
+        <div class="option" data-correct="false">A) 1, 2, 4</div>
+        <div class="option" data-correct="true">B) 1, 2, 3</div>
+        <div class="option" data-correct="false">C) 2, 3, 4</div>
+        <div class="option" data-correct="false">D) 1, 3, 4</div>
+    </div>
+    <div class="explanation" style="display:none;">
+        <h3>Explanation:</h3>
+        <p>The roots of the polynomial \( x^3 - 6x^2 + 11x - 6 \) can be found by factoring. First, try possible rational roots using the Rational Root Theorem. Testing \( x = 1 \), \( x = 2 \), and \( x = 3 \), we find that \( x = 1 \), \( x = 2 \), and \( x = 3 \) are roots. Thus, the polynomial factors as \( (x - 1)(x - 2)(x - 3) = 0 \).</p>
+    </div>
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const toggleButton = document.getElementById('dark-mode-toggle');
+            toggleButton.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                document.body.classList.toggle('light-mode');
+                if (document.body.classList.contains('dark-mode')) {
+                    toggleButton.textContent = 'Light Mode';
+                    toggleButton.classList.remove('dark-mode');
+                    toggleButton.classList.add('light-mode');
+                } else {
+                    toggleButton.textContent = 'Dark Mode';
+                    toggleButton.classList.remove('light-mode');
+                    toggleButton.classList.add('dark-mode');
+                }
+            });
+    
+            const options = document.querySelectorAll('.option');
+            let isAnswered = false;
+    
+            function setInitialColors() {
+                options.forEach(opt => {
+                    opt.style.backgroundColor = document.body.classList.contains('dark-mode') ? '#444' : '#f0f0f0';
+                    opt.style.color = document.body.classList.contains('dark-mode') ? '#fff' : '#000';
+                });
+            }
+    
+            setInitialColors();
+    
+            options.forEach(option => {
+                option.addEventListener('click', function() {
+                    if (isAnswered) return;
+                    isAnswered = true;
+    
+                    const isCorrect = this.getAttribute('data-correct') === 'true';
+                    options.forEach(opt => {
+                        const optIsCorrect = opt.getAttribute('data-correct') === 'true';
+                        if (optIsCorrect) {
+                            opt.style.backgroundColor = 'green';
+                            opt.style.color = 'white';
+                        } else if (opt === this && !isCorrect) {
+                            opt.style.backgroundColor = 'red';
+                            opt.style.color = 'white';
+                        } else {
+                            opt.style.backgroundColor = document.body.classList.contains('dark-mode') ? '#333' : '#ddd';
+                            opt.style.color = document.body.classList.contains('dark-mode') ? '#aaa' : '#666';
+                        }
+                    });
+    
+                    const explanation = document.querySelector('.explanation');
+                    explanation.style.display = 'block';
+                });
+            });
+    
+            // Re-apply colors when switching between light and dark modes
+            toggleButton.addEventListener('click', setInitialColors);
+        });
+    </script>
+    
+  

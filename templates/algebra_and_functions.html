@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algebra and Functions</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="light-mode">
+    <button id="dark-mode-toggle" class="dark-mode">Dark Mode</button>
+    <h1>Algebra and Functions</h1>
+    <div class="topic-container">
+        <div class="topic-box very-high-frequency">
+            <a href="/polynomials-and-rational-functions">
+                <img src="{{ url_for('static', filename='images/polynomials_and_rational_functions.gif') }}" alt="Polynomials and Rational Functions">
+                <span>Polynomials and Rational Functions</span>
+            </a>
+        </div>
+        <div class="topic-box very-high-frequency">
+            <a href="/inequalities">
+                <img src="{{ url_for('static', filename='images/inequalities.gif') }}" alt="Inequalities">
+                <span>Inequalities</span>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const boxes = document.querySelectorAll('.topic-box');
+            boxes.forEach((box, index) => {
+                setTimeout(() => {
+                    box.classList.add('show');
+                }, index * 200);
+            });
+
+            const toggleButton = document.getElementById('dark-mode-toggle');
+            toggleButton.addEventListener('click', function() {
+                document.body.classList.toggle('dark-mode');
+                document.body.classList.toggle('light-mode');
+                if (document.body.classList.contains('dark-mode')) {
+                    toggleButton.textContent = 'Light Mode';
+                    toggleButton.classList.remove('dark-mode');
+                    toggleButton.classList.add('light-mode');
+                } else {
+                    toggleButton.textContent = 'Dark Mode';
+                    toggleButton.classList.remove('light-mode');
+                    toggleButton.classList.add('dark-mode');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

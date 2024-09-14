@@ -1,0 +1,230 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+h1, h2, p {
+    transition: color 0.3s;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+ul li {
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.very-high-frequency {
+    background-color: darkgreen;
+    color: white;
+}
+
+.high-frequency {
+    background-color: green;
+    color: white;
+}
+
+.moderate-frequency {
+    background-color: yellow;
+    color: black;
+}
+
+.low-frequency {
+    background-color: red;
+    color: white;
+}
+
+.topic-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.topic-box {
+    flex: 1 1 calc(50% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+    padding: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s, opacity 0.3s;
+    opacity: 1;
+    transform: none;
+    border: 5px solid;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.topic-box img {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    object-fit: contain;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.topic-box span {
+    display: block;
+    margin-top: 10px;
+    font-size: 1.2em;
+    transition: color 0.3s; /* Added for color transition */
+}
+
+.topic-box:hover {
+    transform: scale(1.05);
+}
+
+.topic-box:hover img {
+    transform: scale(1.1);
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.topic-box.very-high-frequency {
+    border-color: darkgreen;
+}
+
+.topic-box.high-frequency {
+    border-color: green;
+}
+
+.topic-box.moderate-frequency {
+    border-color: yellow;
+}
+
+.topic-box.low-frequency {
+    border-color: red;
+}
+
+/* 
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+*/
+
+body.light-mode {
+    background-color: white;
+    color: black;
+}
+
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode h1, body.dark-mode h2, body.dark-mode p {
+    color: #ffffff;
+}
+
+body.dark-mode .topic-box {
+    background-color: #333333;
+}
+
+body.dark-mode .very-high-frequency {
+    border-color: darkgreen;
+}
+
+body.dark-mode .high-frequency {
+    border-color: green;
+}
+
+body.dark-mode .moderate-frequency {
+    border-color: yellow;
+}
+
+body.dark-mode .low-frequency {
+    border-color: red;
+}
+
+body.dark-mode .topic-box span {
+    color: #ffffff;
+}
+
+body.light-mode .topic-box span {
+    color: #333333;
+}
+
+#dark-mode-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+#dark-mode-toggle.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+#dark-mode-toggle.light-mode {
+    background-color: white;
+    color: black;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0;
+}
+
+.option {
+    padding: 20px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.option:hover {
+    background-color: #f0f0f0;
+}
+
+.option[data-correct="true"] {
+    background-color: green;
+    color: white;
+}
+
+.option[data-correct="false"] {
+    background-color: red;
+    color: white;
+}
+
+.explanation {
+    margin-top: 20px;
+    padding: 15px;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    display: none;
+}
+
+body.dark-mode .explanation {
+    background-color: #444;
+    color: #fff;
+}
